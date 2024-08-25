@@ -21,6 +21,7 @@ sed -i 's/Jellyfin/Nagordola/g' main.jellyfin.bundle.js
 
 # Replace specific files with new versions
 curl -o /jellyfin/jellyfin-web/bc8d51405ec040305a87.ico https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-icon.ico
+curl -o /jellyfin/jellyfin-web/baba78f2a106d9baee83.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-icon.png
 curl -o /jellyfin/jellyfin-web/assets/img/icon-transparent.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-icon.png
 curl -o /jellyfin/jellyfin-web/assets/img/banner-light.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-logo.png
 curl -o /jellyfin/jellyfin-web/assets/img/banner-dark.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-logo.png
