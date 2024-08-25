@@ -14,7 +14,7 @@ done
 
 # Edit the main.jellyfin.bundle.js file
 sed -i 's/enableBackdrops:function(){return L}/enableBackdrops:function(){return P}/g' main.jellyfin.bundle.js
-sed -i 's/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||100}}/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||500}}/g' main.jellyfin.bundle.js
+sed -i 's/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||100}}/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||0}}/g' main.jellyfin.bundle.js
 
 # Replace all "Jellyfin" with "Nagordola" in main.jellyfin.bundle.js
 sed -i 's/Jellyfin/Nagordola/g' main.jellyfin.bundle.js
