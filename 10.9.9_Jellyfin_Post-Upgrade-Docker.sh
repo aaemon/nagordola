@@ -29,7 +29,7 @@ curl -o /jellyfin/jellyfin-web/assets/img/banner-dark.png https://raw.githubuser
 # Update config.json with Nagordola CDN link
 CONFIG_FILE="/jellyfin/jellyfin-web/config.json"
 if [ -f "$CONFIG_FILE" ]; then
-    sed -i 's/"menuLinks": \[\]/"menuLinks": [\n    {\n        "name": "Nagordola CDN",\n        "icon": "cloud_download",\n        "url": "https:\/\/cdn.nagordoa.com.bd"\n    }\n  ]/g' "$CONFIG_FILE"
+    sed -i 's/"menuLinks": \[\]/"menuLinks": [\n    {\n        "name": "Nagordola CDN",\n        "icon": "cloud_download",\n        "url": "https:\/\/cdn.nagordola.com.bd"\n    }\n  ]/g' "$CONFIG_FILE"
 else
     echo "config.json file not found!"
 fi
