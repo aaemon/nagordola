@@ -14,9 +14,10 @@ done
 
 # Edit the main.jellyfin.bundle.js file
 sed -i 's/enableBackdrops:function(){return L}/enableBackdrops:function(){return P}/g' main.jellyfin.bundle.js
+sed -i 's/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||100}}/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||500}}/g' main.jellyfin.bundle.js
 
-# New command to replace the specific pattern in main.jellyfin.bundle.js
-sed -i 's/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||100}}/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||0}}/g' main.jellyfin.bundle.js
+# Replace all "Jellyfin" with "Nagordola" in main.jellyfin.bundle.js
+sed -i 's/Jellyfin/Nagordola/g' main.jellyfin.bundle.js
 
 # Replace specific files with new versions
 curl -o /jellyfin/jellyfin-web/bc8d51405ec040305a87.ico https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-icon.ico
