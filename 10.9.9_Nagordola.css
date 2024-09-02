@@ -425,10 +425,7 @@ button[data-id="quality"].emby-button {
     background-color: #202020b0;
 }
 
-.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound {
-    pointer-events: none;
-    opacity: 0.5;
-}
+
 
 a.navMenuOption.lnkMediaFolder.btnSettings.emby-button[data-itemid="settings"] {
     display: none !important;
@@ -474,3 +471,46 @@ button[data-id="addtoplaylist"].emby-button {
     color: white; 
 }
 
+
+
+#btnAddImage {
+    display: none;
+}
+.updatePasswordForm {
+    display: none;
+}
+.headerUserButton .headerUserButtonRound {
+    background-image: url('https://example.com/new-image.jpg') !important;
+}
+#uploadImage {
+    pointer-events: none;
+}
+.cardContent[data-userid="865c3a87a3484c8cb773d026b2ab8310"] .cardImageContainer {
+    background-image: url('https://raw.githubusercontent.com/aaemon/nagordola/main/assets/C.png') !important;
+}
+.headerButton.headerButtonRight.headerUserButtonRound {
+    background-image: url('https://raw.githubusercontent.com/aaemon/nagordola/main/assets/C.png') !important;
+}
+
+
+/*
+.lnkUserProfile,
+.lnkDisplayPreferences,
+.lnkHomePreferences,
+.lnkPlaybackPreferences,
+.lnkSubtitlePreferences,
+.lnkControlsPreferences {
+    display: none !important;
+    pointer-events: none;
+    cursor: default;
+    opacity: 0;
+}
+
+.verticalSection.verticalSection-extrabottompadding {
+    display: none !important;
+}
+*/
+
+.readOnlyContent .verticalSection.verticalSection-extrabottompadding:first-of-type {
+    display: none !important;
+}
