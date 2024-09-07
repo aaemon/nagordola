@@ -19,6 +19,9 @@ sed -i 's/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||100}}/
 # Replace all "Jellyfin" with "Nagordola" in main.jellyfin.bundle.js
 sed -i 's/Jellyfin/Nagordola/g' main.jellyfin.bundle.js
 
+# Replace all "Jellyfin" with "Nagordola" in index.html
+sed -i 's/Jellyfin/Nagordola/g' index.html
+
 # Replace specific files with new versions
 curl -o /jellyfin/jellyfin-web/bc8d51405ec040305a87.ico https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-icon.ico
 curl -o /jellyfin/jellyfin-web/baba78f2a106d9baee83.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-icon.png
