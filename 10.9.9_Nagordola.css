@@ -349,7 +349,7 @@ button[data-id="quality"].emby-button {
 }
 
 #loginPage {
-	background: url("https://github.com/aaemon/jellyfin-css/blob/main/assets/CI-FTP-Landing-Page.png?raw=true");
+	background: url("assets/img/background.png");
 	background-size: cover;
         background-position: center;
 }
@@ -479,21 +479,19 @@ button[data-id="addtoplaylist"].emby-button {
 .updatePasswordForm {
     display: none;
 }
-.headerUserButton .headerUserButtonRound {
-    background-image: url('https://example.com/new-image.jpg') !important;
-}
+
 #uploadImage {
     pointer-events: none;
 }
 .cardContent[data-userid="865c3a87a3484c8cb773d026b2ab8310"] .cardImageContainer {
-    background-image: url('https://raw.githubusercontent.com/aaemon/nagordola/main/assets/C.png') !important;
+    background-image: url('assets/img/carnival.png') !important;
 }
 .headerButton.headerButtonRight.headerUserButtonRound {
-    background-image: url('https://raw.githubusercontent.com/aaemon/nagordola/main/assets/C.png') !important;
+    background-image: url('assets/img/carnival.png') !important;
 }
 
 
-/*
+
 .lnkUserProfile,
 .lnkDisplayPreferences,
 .lnkHomePreferences,
@@ -505,12 +503,14 @@ button[data-id="addtoplaylist"].emby-button {
     cursor: default;
     opacity: 0;
 }
-
+/*
 .verticalSection.verticalSection-extrabottompadding {
     display: none !important;
 }
-*/
+
 
 .readOnlyContent .verticalSection.verticalSection-extrabottompadding:first-of-type {
     display: none !important;
 }
+
+*/
