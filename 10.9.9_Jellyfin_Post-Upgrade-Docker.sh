@@ -28,6 +28,8 @@ curl -o /jellyfin/jellyfin-web/baba78f2a106d9baee83.png https://raw.githubuserco
 curl -o /jellyfin/jellyfin-web/assets/img/icon-transparent.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-icon.png
 curl -o /jellyfin/jellyfin-web/assets/img/banner-light.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-logo.png
 curl -o /jellyfin/jellyfin-web/assets/img/banner-dark.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/Nagordola-logo.png
+curl -o /jellyfin/jellyfin-web/assets/img/background.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/background.png
+curl -o /jellyfin/jellyfin-web/assets/img/carnival.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/carnival.png
 
 # Update config.json with Nagordola CDN link and Request Server
 CONFIG_FILE="/jellyfin/jellyfin-web/config.json"
