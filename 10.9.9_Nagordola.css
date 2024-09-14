@@ -490,8 +490,6 @@ button[data-id="addtoplaylist"].emby-button {
     background-image: url('assets/img/carnival.png') !important;
 }
 
-
-
 .lnkUserProfile,
 .lnkDisplayPreferences,
 .lnkHomePreferences,
@@ -503,14 +501,7 @@ button[data-id="addtoplaylist"].emby-button {
     cursor: default;
     opacity: 0;
 }
-/*
-.verticalSection.verticalSection-extrabottompadding {
-    display: none !important;
+
+#image {
+    background-image: url('assets/img/carnival.png') !important;
 }
-
-
-.readOnlyContent .verticalSection.verticalSection-extrabottompadding:first-of-type {
-    display: none !important;
-}
-
-*/
