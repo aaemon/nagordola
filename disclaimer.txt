@@ -1,0 +1,5 @@
+<div style="text-align: center;">
+<h3><u>For Optimal Streaming</u></h3> Jellyfin (
+<a href="https://play.google.com/store/apps/details?id=dev.jdtech.jellyfin&pcampaignid=web_share">Android</a> | <a href="https://apps.apple.com/ca/app/swiftfin/id1604098728">IOS</a> | <a href="https://apps.apple.com/us/app/jellyfin-mobile/id1480192618?platform=iphone">Android TV</a> | <a href="https://github.com/jellyfin/jellyfin-media-player/releases/download/v1.11.1/JellyfinMediaPlayer-1.11.1-windows-x64.exe">Windows</a> | <a href="https://jellyfin.org/downloads/clients">Other</a> )</p>
+</br>
+</div>
