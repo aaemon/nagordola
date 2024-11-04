@@ -441,14 +441,15 @@ a.navMenuOption.lnkMediaFolder.btnSettings.emby-button[data-itemid="settings"] {
   padding:.54em 0 0 0;
 }
 
-.btnShuffle,
-.btnSelectView,
-.btnSort
-.btnFilter {
-  pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
+
+button.btnShuffle.autoSize.paper-icon-button-light,
+button.btnSelectView.autoSize.paper-icon-button-light,
+button.btnSort.autoSize.paper-icon-button-light {
+    pointer-events: none; /* Prevents clicking */
+    opacity: 0.5; /* Reduces opacity to give a 'disabled' look */
+    cursor: not-allowed; /* Shows a 'not-allowed' cursor on hover */
 }
+
 
 .dashboardSection {
   max-width: 1100px;
@@ -484,7 +485,7 @@ button[data-id="addtoplaylist"].emby-button {
 #uploadImage {
     pointer-events: none;
 }
-.cardContent[data-userid="5aa7d0f6163246e7b46ffcb776d35157"] .cardImageContainer {
+.cardContent[data-userid="1564668b266b42eb94b759c9ebd5b2d2"] .cardImageContainer {
     background-image: url('assets/img/carnival.png') !important;
 }
 .headerButton.headerButtonRight.headerUserButtonRound {
@@ -501,6 +502,9 @@ button[data-id="addtoplaylist"].emby-button {
     pointer-events: none;
     cursor: default;
     opacity: 0;
+}
+.alphaPicker {
+    display: none;
 }
 
 #image {
