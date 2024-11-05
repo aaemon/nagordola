@@ -31,12 +31,5 @@ curl -o /jellyfin/jellyfin-web/assets/img/banner-dark.png https://raw.githubuser
 curl -o /jellyfin/jellyfin-web/assets/img/background.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/background.png
 curl -o /jellyfin/jellyfin-web/assets/img/carnival.png https://raw.githubusercontent.com/aaemon/nagordola/main/assets/carnival.png
 
-# Update config.json with Nagordola CDN link and Request Server
-CONFIG_FILE="/jellyfin/jellyfin-web/config.json"
-if [ -f "$CONFIG_FILE" ]; then
-    sed -i 's/"menuLinks": \[\]/"menuLinks": [\n    {\n        "name": "Nagordola CDN",\n        "icon": "cloud_download",\n        "url": "https:\/\/cdn.nagordola.com.bd"\n    },\n    {\n        "name": "Request Server",\n        "icon": "movie_filter",\n        "url": "https:\/\/discord.gg\/mQZkY4A2"\n    }\n]/g' "$CONFIG_FILE"
-else
-    echo "config.json file not found!"
-fi
 
 echo "Jellyfin update script has completed successfully."
