@@ -503,9 +503,6 @@ button[data-id="addtoplaylist"].emby-button {
     cursor: default;
     opacity: 0;
 }
-.alphaPicker {
-    display: none;
-}
 
 #image {
     background-image: url('assets/img/carnival.png') !important;
