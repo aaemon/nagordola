@@ -1,0 +1,10 @@
+.skinHeader::after {
+    content: "Site Under Maintenance. We are working to fix the issue as quickly as possible.";
+    display: block;
+    position: relative;
+    background-color: gold;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
