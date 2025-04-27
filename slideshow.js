@@ -1,5 +1,5 @@
 /*
- * Jellyfin Slideshow by M0RPH3US v3.0.0
+<script async src="https://cdn.jsdelivr.net/gh/aaemon/nagordola@master/slideshow.js"></script>
  */
 
 //Core Module Configuration
