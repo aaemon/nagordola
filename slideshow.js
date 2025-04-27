@@ -1,3 +1,6 @@
+/*
+ * Jellyfin Slideshow by M0RPH3US v3.0.0
+ */
 
 //Core Module Configuration
 const CONFIG = {
@@ -157,6 +160,74 @@ const initLoadingScreen = () => {
     currentPath.endsWith("/web/");
 
   if (!isHomePage) return;
+
+  const loadingDiv = document.createElement("div");
+  loadingDiv.className = "bar-loading";
+  loadingDiv.id = "page-loader";
+  loadingDiv.innerHTML = `
+    <div class="loader-content">
+      <h1>
+        <img src="/web/assets/img/banner-light.png" alt="Server Logo">
+      </h1>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+        <div class="progress-gap" id="progress-gap"></div>
+        <div class="unfilled-bar" id="unfilled-bar"></div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(loadingDiv);
+
+  requestAnimationFrame(() => {
+    document.querySelector(".bar-loading h1 img").style.opacity = "1";
+  });
+
+  const progressBar = document.getElementById("progress-bar");
+  const unfilledBar = document.getElementById("unfilled-bar");
+
+  let progress = 0;
+  let lastIncrement = 5;
+
+  const progressInterval = setInterval(() => {
+    if (progress < 95) {
+      lastIncrement = Math.max(0.5, lastIncrement * 0.98);
+      const randomFactor = 0.8 + Math.random() * 0.4;
+      const increment = lastIncrement * randomFactor;
+      progress += increment;
+      progress = Math.min(progress, 95);
+
+      progressBar.style.width = `${progress}%`;
+      unfilledBar.style.width = `${100 - progress}%`;
+    }
+  }, 150);
+
+  const checkInterval = setInterval(() => {
+    const loginFormLoaded = document.querySelector(".manualLoginForm");
+    const homePageLoaded =
+      document.querySelector(".homeSectionsContainer") &&
+      document.querySelector("#slides-container");
+
+    if (loginFormLoaded || homePageLoaded) {
+      clearInterval(progressInterval);
+      clearInterval(checkInterval);
+
+      progressBar.style.transition = "width 300ms ease-in-out";
+      progressBar.style.width = "100%";
+      unfilledBar.style.width = "0%";
+
+      progressBar.addEventListener('transitionend', () => {
+        requestAnimationFrame(() => {
+          const loader = document.querySelector(".bar-loading");
+          if (loader) {
+            loader.style.opacity = '0';
+            setTimeout(() => {
+              loader.remove();
+            }, 300);
+          }
+        });
+      })
+    }
+  }, CONFIG.loadingCheckInterval);
 };
 
 /**
