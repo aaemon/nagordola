@@ -1,0 +1,14 @@
+# File location/etc/nginx/nginx.conf 
+
+# replace this portion
+events {
+       include /data/nginx/custom/events[.]conf;
+}
+
+# with 
+
+worker_rlimit_nofile 16384;
+events {
+        worker_connections 8192;
+        include /data/nginx/custom/events[.]conf;
+}
