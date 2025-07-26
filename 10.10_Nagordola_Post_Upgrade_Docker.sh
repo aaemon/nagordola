@@ -13,11 +13,21 @@ grep -rl 'document.title=e||"Jellyfin"' . | while IFS= read -r file; do
 done
 
 # Edit the main.jellyfin.bundle.js file
-sed -i 's/("enableBackdrops",!1),!1)/("enableBackdrops",!0),!0)/g' main.jellyfin.bundle.js
+sed -i 's/enableBackdrops:function(){return P}/enableBackdrops:function(){return E}/g' main.jellyfin.bundle.js
 sed -i 's/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||100}}/t=parseInt(this.get("libraryPageSize",!1),10);return 0===t?0:t||0}}/g' main.jellyfin.bundle.js
 
 # Replace all "Jellyfin" with "Nagordola" in main.jellyfin.bundle.js
 sed -i 's/Jellyfin/Nagordola/g' main.jellyfin.bundle.js
+
+# check if curl is installed if not install it
+# if ! command -v curl &> /dev/null; then
+#     echo "curl could not be found, installing..."
+#     apt-get update && apt-get install -y curl
+# fi
+
+# download this file in /jellyfin/jellyfin-web location  https://github.com/aaemon/nagordola/blob/main/slideshow.js as slideshow.js
+curl -o /jellyfin/jellyfin-web/slideshow.js https://raw.githubusercontent.com/aaemon/nagordola/main/slideshow.js
+sed -i '/<\/head>/i <script src="slideshow.js"></script>' index.html
 
 # Replace all "Jellyfin" with "Nagordola" in index.html
 sed -i 's/Jellyfin/Nagordola/g' index.html
